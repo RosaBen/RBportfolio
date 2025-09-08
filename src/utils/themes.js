@@ -1,14 +1,12 @@
-const themes = ['theme-light', 'theme-dark'];
+const themes = ["theme-light", "theme-dark"];
 
 function setTheme({ setClassName }) {
-  themes.map(theme => (
+  themes.map(theme =>
     localStorage.setItem(theme, JSON.stringify(setClassName))
-  ))
+  );
 }
 
-function getTheme() {
-
-}
+function getTheme() {}
 
 // function keepTheme(setClassName) {
 //   const theme = localStorage.getItem('theme');
