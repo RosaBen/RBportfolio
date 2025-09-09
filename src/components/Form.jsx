@@ -1,6 +1,6 @@
-export default function Form () {
+export default function Form ({ ref }) {
   return (
-    <fieldset className="form-container">
+    <fieldset className="form-container" ref={ ref }>
       <legend className="legend-container">Please Fill out form</legend>
       <form action="" >
         <div className="form-infos">
