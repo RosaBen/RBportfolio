@@ -8,21 +8,32 @@ export default function Contact () {
             <p>Would you like to contact me to discuss about my projects? Please, click on "Leave a message" and fill out the form, I will contact you as soon as possible</p>
             <button>Leave a Message</button>
           </div>
-          <fieldset>
-            <legend>Please Fill out form</legend>
-            <form action="">
-              <label htmlFor="fullname">Your name</label>
-              <input type="text" name="fullname" />
-              <label htmlFor="title">Object</label>
-              <input type="text" name="title" />
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" id="email" />
-              <fieldset>
-                <legend>
-                  Your message
-                </legend>
-                <textarea name="content" id="content"></textarea>
-              </fieldset>
+          <fieldset className="form-container">
+            <legend className="legend-container">Please Fill out form</legend>
+            <form action="" >
+              <div className="form-infos">
+                <img src="" alt="" className="column-one" />
+                <div className="column-two">
+
+                  <div className="labels">
+                    <label htmlFor="fullname">Your name</label>
+                    <label htmlFor="title">Object</label>
+                    <label htmlFor="email">Email</label>
+                  </div>
+                  <div className="inputs">
+
+                    <input type="text" name="fullname" />
+                    <input type="text" name="title" />
+                    <input type="email" name="email" id="email" />
+                  </div>
+                </div>
+                <fieldset className="textarea">
+                  <legend>
+                    Your message
+                  </legend>
+                  <textarea name="content" id="content"></textarea>
+                </fieldset>
+              </div>
               <button type="submit">Send</button>
             </form>
           </fieldset>

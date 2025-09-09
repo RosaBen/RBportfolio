@@ -16,6 +16,9 @@
   --card-front-bg: #f9f8f8;
   --card-back-bg: #dbe7e4;
   --card-text: #5e4b56;
+  --button-background: #5e4b56;
+  --form-text: #5e4b56;
+  --button-text: #f9f8f8;
 }
 
 .theme-dark {
@@ -29,6 +32,10 @@
   --card-front-bg: #586f7c;
   --card-back-bg: #2f4550;
   --card-text: #f9f8f8;
+  --button-background: #b8dbd9;
+  --button-text: #5e4b56;
+  --form-text: #f9f8f8;
+
 }
 
 html,
@@ -45,19 +52,60 @@ body {
 
 button {
   font-family: "Roboto Mono", monospace;
+  width: 7rem;
+  border: 2px solid var(--button-border);
+  border-radius: 2rem;
+  padding: 0.2rem;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 nav {
+  position: fixed;
+  width: 100%;
   display: flex;
   color: var(--light-text);
   align-items: center;
   justify-content: space-between;
   background-color: var(--dark-background);
   padding: 1rem 1.5rem;
+  opacity: 0.5;
+}
+
+header {
+  padding-bottom: 8rem;
 }
 
 section {
+  padding-top: rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+input {
+  width: 13rem;
+  height: 3rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+label {
+  width: 6rem;
+}
+
+textarea {
+  margin: 1rem;
+  width: 90%;
+  height: 10rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+legend {
+  padding: 1rem;
 }

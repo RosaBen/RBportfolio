@@ -14,10 +14,12 @@ function App () {
   return (
     <BrowserRouter>
       <body className={ isDark ? "theme-dark" : "theme-light" }>
-        <div>
+        <header>
           <Navbar toggleTheme={ toggleTheme } isDark={ isDark } />
-        </div>
-        <AppRouter />
+        </header>
+        <main>
+          <AppRouter />
+        </main>
       </body>
     </BrowserRouter>
   );

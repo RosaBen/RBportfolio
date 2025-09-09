@@ -11,6 +11,61 @@
 
 .message-to-contact {
   width: 70%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   padding-bottom: 1rem;
+}
+
+.message-to-contact p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--light-text);
+}
+
+
+.form-container {
+  color: var(--form-text);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+
+
+.form-infos {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  justify-items: center;
+  padding-bottom: 1rem;
+}
+
+.column-one {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.column-two {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.textarea {
+  grid-column: 1/span 2;
+  grid-row: 2;
+  width: 90%;
+
 }
