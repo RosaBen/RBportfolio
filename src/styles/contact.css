@@ -1,0 +1,16 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-background);
+  width: 40%;
+  border: 3px solid var(--light-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.message-to-contact {
+  width: 70%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
