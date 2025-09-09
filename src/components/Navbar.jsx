@@ -1,43 +1,56 @@
 import { Link } from "react-router-dom";
-// import Toggle from './Toggle'
-import sun from "../assets/images/sun.svg";
-import moon from "../assets/images/moon.svg";
-import github from "../assets/images/github.svg";
-// import { useState } from "react"
-export default function Navbar(props) {
-  // const [dark,setDark]=useState(null)
-  // setClassName={toggleClass} toggleTheme={toggleTheme}
-  const toggleBtn = props.isDark ? (
-    <img src={sun} className="icon" alt="Light mode" />
+import { useState } from "react";
+import Toggle from './Toggle';
+
+import githubDark from "../assets/images/github-dark.svg";
+import githubLight from '../assets/images/github-light.svg';
+
+export default function Navbar (props) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const toggleGitHub = props.isDark ? (
+    <img src={ githubLight } className="nav-github nav-light" alt="github logo " />
   ) : (
-    <img src={moon} className="icon" alt="Dark mode" />
+    <img src={ githubDark } className="nav-github  nav-dark " alt="github logo " />
   );
 
-  // console.log('isDark',props.isDark)
   return (
     <nav>
       <div className="landing_text">
         <h1 className="landing_name">Rosa Benchabane</h1>
         <h2 className="landing_title">Full Stack Web Developer</h2>
       </div>
-      <div className="nav-container">
+      <div className="burger-menu" onClick={ toggleMenu }>
+        <div className={ `burger-line ${isMenuOpen ? 'open' : ''}` }></div>
+        <div className={ `burger-line ${isMenuOpen ? 'open' : ''}` }></div>
+        <div className={ `burger-line ${isMenuOpen ? 'open' : ''}` }></div>
+      </div>
+      <div className={ `nav-container ${isMenuOpen ? 'menu-open' : ''}` }>
         <div className="navbar-links">
-          <Link to="/" className="nav_button">
+          <Link to="/" className="nav-button" onClick={ closeMenu }>
             Home
           </Link>
-          <Link to="/projects" className="nav_button">
+          <Link to="/projects" className="nav-button" onClick={ closeMenu }>
             Projects
           </Link>
         </div>
         <Link
           to="https://github.com/RosaBen/RBportfolio"
-          className="nav_github"
+          target="_blank" rel="noopener noreferrer"
+          onClick={ closeMenu }
         >
-          <img src={github} />
+          { toggleGitHub }
         </Link>
-        {/* <Toggle setClassName ={props.setClassName}/> */}
-        <div className="navbar-theme" onClick={props.toggleTheme}>
-          {toggleBtn}
+        <div className="navbar-theme" onClick={ props.toggleTheme }>
+          <Toggle />
         </div>
       </div>
     </nav>

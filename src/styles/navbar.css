@@ -1,0 +1,241 @@
+/* Navigation container - visible sur desktop, caché sur mobile */
+.nav-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Burger menu - caché sur desktop */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-text);
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Animation du burger en X quand ouvert */
+.burger-line.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-line.open:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-button {
+  background-color: var(--dark-background);
+  color: var(--light-text);
+  padding: 0.5rem 1rem;
+  font-size: 1.2em;
+  border: solid 2px transparent;
+  border-radius: 0.5rem;
+  margin: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  border-color: var(--light-border);
+  transform: translateY(-2px);
+}
+
+.nav-github {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-github:hover {
+  transform: scale(1.1);
+}
+
+.nav-dark {
+  border: 2px solid white;
+}
+
+.nav-light {
+  border: 2px solid black;
+}
+
+.navbar-theme {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.icon-nav {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.1rem;
+  border: none;
+}
+
+.landing_name {
+  padding: 20px 20px 0px 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.landing_title {
+  padding: 10px;
+  margin-top: 0px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 1024px) {
+  .nav-container {
+    gap: 2rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem;
+  }
+
+  .nav-button {
+    font-size: 1.1em;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .landing_name {
+    font-size: 1.3rem;
+  }
+
+  .landing_title {
+    font-size: 1rem;
+  }
+}
+
+/* Menu burger activé à partir de 768px */
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  /* Afficher le burger menu */
+  .burger-menu {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  /* Cacher le menu par défaut sur mobile */
+  .nav-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--dark-background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+  }
+
+  /* Afficher le menu quand ouvert */
+  .nav-container.menu-open {
+    right: 0;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    width: 200px;
+    text-align: center;
+    border: 2px solid var(--light-border);
+  }
+
+  .nav-github {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .navbar-theme {
+    justify-content: center;
+  }
+
+  .landing_text {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .landing_name {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .landing_title {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .burger-menu {
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+
+  .nav-container {
+    width: 280px;
+  }
+
+  .nav-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    width: 180px;
+  }
+
+  .nav-github {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .icon-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .landing_name {
+    font-size: 1.1rem;
+  }
+
+  .landing_title {
+    font-size: 0.8rem;
+  }
+}
