@@ -3,6 +3,8 @@ import AppRouter from "./routes/Router";
 import "./styles/navbar.css";
 import './styles/sampleProjects.css';
 import './styles/contact.css';
+import './styles/mobile.css';
+import './styles/tablet.css';
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 

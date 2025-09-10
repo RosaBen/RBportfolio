@@ -104,6 +104,7 @@ textarea {
   height: 10rem;
   border-radius: 1rem;
   box-shadow: var(--shadow);
+  border: none;
 }
 
 legend {

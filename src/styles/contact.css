@@ -69,3 +69,7 @@
   width: 90%;
 
 }
+
+.mobile {
+  display: none;
+}

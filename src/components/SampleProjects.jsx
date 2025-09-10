@@ -1,5 +1,7 @@
-import img1 from "../assets/images/background.webp";
+
 import { useState } from "react";
+import img1 from "../assets/images/background.webp";
+import Cards from './Cards';
 
 export default function SampleProjects () {
   const [flippedCards, setFlippedCards] = useState({});
@@ -39,28 +41,7 @@ export default function SampleProjects () {
         <p>Few months ago, I have started learning web-developement with The Hacking Projet. I am learning Ruby, Rails, Javascript and React.</p>
         <p>You will find below a few sample of my projects. Some of them created during my training and others are my own projects</p>
       </div>
-      <div className="cards-container">
-        { cards.map(card => (
-          <div
-            key={ card.id }
-            className={ flippedCards[card.id] ? "card is-flipped" : "card" }
-            onClick={ () => toggleCard(card.id) }
-          >
-            <div className="card__inner">
-              <div className="card__face card__front">
-                <img src={ card.image } alt={ card.title } className="img-project" />
-                <h3 className="card__title">{ card.title }</h3>
-              </div>
-              <div className="card__face card__back">
-                <div className="card__content">
-                  <h3>{ card.title }</h3>
-                  <p>{ card.description }</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )) }
-      </div>
+      <Cards flippedCards={ flippedCards } toggleCard={ toggleCard } cards={ cards } />
     </section>
   );
 }

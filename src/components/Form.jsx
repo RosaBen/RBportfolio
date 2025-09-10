@@ -1,11 +1,20 @@
+import email from '../assets/images/email.svg';
 export default function Form ({ ref }) {
   return (
     <fieldset className="form-container" ref={ ref }>
       <legend className="legend-container">Please Fill out form</legend>
       <form action="" >
-        <div className="form-infos">
-          <img src="" alt="" className="column-one" />
-          <div className="column-two">
+        <div className="form-infos ">
+          <img src={ email } alt="Email anime" className="column-one desktop" />
+          <div className="mobile">
+            <label htmlFor="fullname">Your name</label>
+            <input type="text" name="fullname" />
+            <label htmlFor="title">Object</label>
+            <input type="text" name="title" />
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div className="column-two desktop">
 
             <div className="labels">
               <label htmlFor="fullname">Your name</label>

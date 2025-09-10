@@ -78,7 +78,7 @@
   border: 0.2rem solid var(--light-border);
 }
 
-/* Masquer le titre sur la face avant */
+
 .card__title {
   display: none;
 }
@@ -89,14 +89,14 @@
 }
 
 .card__content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   color: var(--card-text);
 }
 
 .card__content p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1;
   color: var(--card-text);
 }
 
@@ -114,50 +114,5 @@
 
   .card {
     height: 280px;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-description {
-    width: 95%;
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  .cards-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin: 1.5rem auto;
-  }
-
-  .card {
-    height: 260px;
-  }
-
-  .card__content p {
-    font-size: 0.9rem;
-  }
-
-  .card__content h3 {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-description {
-    border-width: 0.3rem;
-    padding: 0.8rem;
-  }
-
-  .card {
-    height: 220px;
-  }
-
-  .card__content h3 {
-    font-size: 1.1rem;
-  }
-
-  .card__content p {
-    font-size: 0.8rem;
   }
 }

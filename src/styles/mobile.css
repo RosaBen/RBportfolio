@@ -1,0 +1,170 @@
+@media (max-width: 480px) {
+
+  /* Nav-Header */
+
+  header {
+    width: 480px;
+    margin-bottom: -7rem;
+  }
+
+  nav {
+    opacity: 1;
+  }
+
+  .burger-menu {
+    top: 0.8rem;
+    right: 1rem;
+  }
+
+  .nav-container {
+    width: 280px;
+  }
+
+  .nav-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    width: 180px;
+  }
+
+  .nav-github {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .icon-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .landing_name {
+    font-size: 1.1rem;
+  }
+
+  .landing_title {
+    font-size: 0.8rem;
+  }
+
+  /* SampleProjects Cards*/
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 460px;
+    margin: 0 auto;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    max-width: 480px;
+  }
+
+  /* Form-Contact */
+
+  button {
+    width: 5.5rem;
+    font-size: 0.8rem;
+  }
+
+  input {
+    width: 400px !important;
+    height: 2rem;
+  }
+
+  /* label {
+    font-size: 1rem;
+    width: 6rem;
+  } */
+
+  textarea {
+    margin: 0.1rem;
+    width: 400px !important;
+    height: 10rem;
+
+  }
+
+  .contact-container {
+    max-width: 415px;
+    border: none;
+  }
+
+  .message-to-contact {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-background);
+    width: 415px;
+    border: 3px solid var(--light-border);
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .message-to-contact p {
+    font-size: 1rem !important;
+
+  }
+
+  .form-container {
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container,
+  .textarea {
+    border: none;
+  }
+
+  .legend-container {
+    font-size: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .textarea legend {
+    font-size: 1rem;
+  }
+
+  .textarea {
+    display: flex;
+    border: none;
+  }
+
+  /* Home-Cards */
+  .home-description {
+    border-width: 0.3rem;
+    padding: 0.8rem;
+  }
+
+  .card {
+    height: 220px;
+  }
+
+  .card__content h3 {
+    font-size: 1.1rem;
+  }
+
+  .card__content p {
+    font-size: 0.8rem;
+  }
+}

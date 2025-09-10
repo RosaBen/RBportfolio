@@ -1,0 +1,158 @@
+@media (max-width: 768px) {
+
+  /* Nav-Header */
+
+  header {
+    width: 768px;
+    margin-bottom: -7rem;
+  }
+
+  nav {
+    position: relative;
+    opacity: 1;
+  }
+
+  /* Afficher le burger menu */
+  .burger-menu {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+
+  /* Cacher le menu par défaut sur mobile */
+  .nav-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--dark-background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+  }
+
+  /* Afficher le menu quand ouvert */
+  .nav-container.menu-open {
+    right: 0;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    width: 200px;
+    text-align: center;
+    border: 2px solid var(--light-border);
+  }
+
+  .nav-github {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .navbar-theme {
+    justify-content: center;
+  }
+
+  .landing_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 8rem;
+  }
+
+  .landing_name {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .landing_title {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  /* Home-Cards */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 740px;
+  }
+
+  .home-description {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    background-size: auto;
+    max-width: 768px;
+  }
+
+  .card {
+    height: 260px;
+  }
+
+  .card__content p {
+    font-size: 0.9rem;
+  }
+
+  .card__content h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Form-Contact */
+  .contact-container {
+    width: 90%;
+    margin: 1rem;
+  }
+
+  .message-to-contact p {
+    font-size: 1.2rem;
+  }
+
+  .form-container,
+  .textarea {
+    border: none;
+  }
+
+  .legend-container {
+    font-size: 1rem;
+  }
+
+  .form-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 21rem;
+  }
+}
