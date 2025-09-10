@@ -105,27 +105,3 @@
   font-weight: 500;
   font-size: 1.1rem;
 }
-
-/* Media queries pour la responsivité */
-@media (max-width: 1024px) {
-  .nav-container {
-    gap: 2rem;
-  }
-
-  .navbar-links {
-    gap: 1.5rem;
-  }
-
-  .nav-button {
-    font-size: 1.1em;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .landing_name {
-    font-size: 1.3rem;
-  }
-
-  .landing_title {
-    font-size: 1rem;
-  }
-}

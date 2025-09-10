@@ -5,6 +5,7 @@ import './styles/sampleProjects.css';
 import './styles/contact.css';
 import './styles/mobile.css';
 import './styles/tablet.css';
+import './styles/desktop1024.css';
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 
